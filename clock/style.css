@@ -23,11 +23,11 @@ body {
     margin: 50px auto;
     position: relative;
     padding: 2rem;
-    box-shadow:
+    /*box-shadow:
     0 0 0px 4px rgba(0,0,0,0.1),
     inset 0 0 0 3px #efefef,
     inset 0 0 10px black,
-    inset 0 0 10px rgba(0,0,0,0.2);
+    inset 0 0 10px rgba(0,0,0,0.2);*/
     
 }
 
@@ -35,7 +35,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    transform: translateY(-3px);    /*account for the height of the clock hands*/
+    transform: translateY(-3px);
     
 }
 
@@ -43,7 +43,7 @@ body {
 .hand {
     width: 50%;
     height: 6px;
-    background:black;
+    background: rgb(1, 64, 116);
     position: absolute;
     top: 50%;
     transform-origin: 100%;
@@ -51,4 +51,12 @@ body {
     transition: all;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 
+}
+
+.hour-hand {
+    background:rgb(10, 10, 10);
+}
+
+.sec-hand {
+    background: rgb(27, 128, 196);
 }
