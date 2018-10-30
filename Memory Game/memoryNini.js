@@ -56,7 +56,7 @@ function setUp() {
         cell.complete = false;
         cell.clicked = false;
         cell.value = distribute[i];
-
+        
         cell.addEventListener("mouseenter", function () {
             if (this.complete === false && this.clicked === false)
                 this.style.background = 'orange';

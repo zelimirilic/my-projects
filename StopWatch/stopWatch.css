@@ -1,0 +1,21 @@
+body {
+	background: #2d3333
+}
+
+.btn {
+	font-size: 30px;
+	border: 1px solid #163057;
+	border-radius: 10px;
+	height: auto;
+	background: #0ac2b3;
+}
+
+.container {
+	padding: 15px;
+	margin: 100px auto;
+	width: 600px;
+	border: 1px solid #cc33cc;
+	border-radius: 20px;
+	height: auto;
+	background: #53a82b;
+}
