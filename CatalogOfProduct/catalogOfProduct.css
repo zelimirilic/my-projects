@@ -1,0 +1,36 @@
+body {
+    background-color: bisque;
+}
+
+#container {
+    width: 900px;
+    height: 100%;
+    margin: 50px auto;
+    background-color: aquamarine;
+}
+
+.field {
+    margin: 10px auto;
+}
+
+h1 {
+    color: blue;
+}
+
+h3 {
+    color: rgb(69, 69, 175);
+    margin: 20px 10px;
+}
+
+#productText {
+    color: rgb(146, 58, 134);
+}
+
+#similarTable {
+    color: brown;
+}
+
+#mainTable {
+    color: blueviolet;
+    
+}
