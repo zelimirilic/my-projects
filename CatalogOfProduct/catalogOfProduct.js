@@ -1,7 +1,7 @@
 // event hendlers
 
 document.getElementById('inputBtn').addEventListener('click', function () {
-    processSearch(document.getElementById('input').value);
+    searchProductById(document.getElementById('input').value);
 
 });
 
@@ -11,7 +11,7 @@ api.searchAllProducts().then(function (value) {
 
 // functions definitions
 
-function processSearch(searchId) {
+function searchProductById(searchId) {
     api.searchProductById(searchId)
         .then(function (val) {
             return Promise.all([
@@ -85,7 +85,7 @@ function updateTable(tableId, productArr) {
         var td4 = document.createElement('button');
         td4.addEventListener('click', function () {
 
-            processSearch(this.parentNode.firstChild.innerHTML);
+            searchProductById(this.parentNode.firstChild.innerHTML);
 
         });
         td1.appendChild(document.createTextNode(productArr[i].id));

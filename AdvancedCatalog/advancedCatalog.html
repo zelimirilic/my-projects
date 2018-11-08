@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advanced Catalog</title>
+    <link rel="stylesheet" href="advancedCatalog.css">
+    <script src="library.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <h1 id="mainTitle">Advanced Catalog</h1>
+    <div>
+        <h3>Search Product by ID</h3>
+        <input id="input1">
+        <button id="inputBtn1">Search Product</button>
+    </div>
+    <div>
+        <h3>Search Product by Type</h3>
+        <input id="input2">
+        <button id="inputBtn2">Search Type</button>
+    </div>
+    <div>
+        <h3>Search Product by Price</h3>
+        <input id="input3">
+        <button id="inputBtn3">Search Price</button>
+    </div>
+    <div>
+        <h3>Examined Product</h3>
+        <p id="productText">Product ID: <br>Price: <br>Type: <br></p>
+        <h3>List of Similar Products</h3>
+        <table id="similarTable" width="300px" border="1">
+            <tr>
+                <th>ProductID</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Examine</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h3>List of All Products</h3>
+        <table id="mainTable" width="300px" border="1">
+            <tr>
+                <th>ProductID</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Examine</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<script src="advancedCatalog.js"></script>
+
+
+
+
+</body>
+
+</html>
