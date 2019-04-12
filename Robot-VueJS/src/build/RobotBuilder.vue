@@ -1,20 +1,55 @@
 <template>
   <div class="content">
-    <button class="add-to-cart" v-on:click="addToCart()">Add to Cart</button>
+    <div class="preview">
+      <div class="preview-content">
+        <div class="top-row">
+          <img :src="selectedRobot.head.src">
+        </div>
+        <div class="middle-row">
+          <img :src="selectedRobot.leftArm.src" class="rotate-left">
+          <img :src="selectedRobot.torsos.src">
+          <img :src="selectedRobot.rightArm.src" class="rotate-right">
+        </div>
+        <div class="bottom-row">
+          <img :src="selectedRobot.bases.src">
+        </div>
+          <button class="add-to-cart" v-on:click="addToCart()">Add to Cart</button>
+      </div>
+    </div>
     <div class="top-row">
       <!--<div class="robot-name">
               {{selectedRobot.head.title}}
               <span v-show="selectedRobot.head.onSale" class="sale">Sale!</span>
       </div>-->
-      <PartSelector v-bind:partovi="robotParts.heads" position="top"/>
+      <PartSelector
+        v-bind:partovi="robotParts.heads"
+        position="top"
+        v-on:partSelected="part => selectedRobot.head=part"
+      />
     </div>
     <div class="middle-row">
-      <PartSelector v-bind:partovi="robotParts.arms" position="left"/>
-      <PartSelector v-bind:partovi="robotParts.torsos" position="center"/>
-      <PartSelector v-bind:partovi="robotParts.arms" position="right"/>
+      <PartSelector
+        v-bind:partovi="robotParts.arms"
+        position="left"
+        v-on:partSelected="part => selectedRobot.leftArm=part"
+      />
+      <PartSelector
+        v-bind:partovi="robotParts.torsos"
+        position="center"
+        v-on:partSelected="part => selectedRobot.torsos=part"
+      />
+      <PartSelector
+        v-bind:partovi="robotParts.arms"
+        position="right"
+        v-on:partSelected="part => selectedRobot.rightArm=part"
+      />
     </div>
     <div class="bottom-row">
-      <PartSelector v-bind:partovi="robotParts.bases" position="bottom"/>
+      <PartSelector
+        v-bind:partovi="robotParts.bases"
+        position="bottom"
+        v-on:partSelected="part => selectedRobot.bases=part"
+      />
     </div>
     <div>
       <h1 class="cart">Cart</h1>
@@ -177,8 +212,8 @@ export default {
 }
 .add-to-cart {
   position: absolute;
-  right: 30px;
-  width: 220px;
+  right: 5px;
+  width: 210px;
   padding: 3px;
   font-size: 16px;
 }
@@ -193,6 +228,27 @@ th {
 }
 .cart {
   text-align: left;
+}
+.preview {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 210px;
+  height: 210px;
+  padding: 5px;
+}
+.preview-content {
+  border: 1px solid #999;
+}
+.preview img {
+  width: 50px;
+  height: 50px;
+}
+.rotate-right {
+  transform: rotate(90deg);
+}
+.rotate-left {
+  transform: rotate(-90deg);
 }
 </style>
 
